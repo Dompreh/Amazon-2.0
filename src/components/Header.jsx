@@ -51,12 +51,12 @@ function Header() {
                 </p>
                 <p className="font-extrabold md:text-sm">Account & Lists</p>
             </div>
-            <div className="link">
+            <div onClick={() => router.push('/orders')} className="link">
                 <p className="md:text-sm">Returns</p>
                 <p className="font-extrabold md:text-sm">& Orders</p>
             </div>
 
-            <div onClick={() => router.push('/checkout') } className="relative link flex items-center">
+            <div onClick={() => session && router.push('/checkout') } className="relative link flex items-center">
                 <span className="absolute w-4 h-4  right-0 top-0 md:right-10 text-center font-extrabold bg-yellow-500 rounded-lg text-black">{items.length}</span>
 
                 <ShoppingCartIcon className="h-10"/>
